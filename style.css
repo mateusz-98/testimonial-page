@@ -1,0 +1,140 @@
+html {
+    box-sizing: border-box;
+    font-family: "Sora", sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+:root {
+    --title-clr: #18181B;
+    --text-clr: #52525A;
+    --white-clr: #FFFFFF;
+    --bg-clr: #FAFAF9;
+    --shadow-clr: rgba(17, 23, 41, 0.05);
+    --orange-clr: #F5C044;
+    --section-width: 1136px;
+}
+body {
+    background: var(--bg-clr);
+}
+.testimonial {
+    gap: 32px;
+    width: 100%;
+    display: flex;
+    margin: 162px auto;
+    max-width: var(--section-width);
+}
+.testimonial > div {
+    width: 50%;
+}
+.review-star {
+    margin-bottom: 16px;
+}
+.review-star p {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    font-size: 24px;
+    border-radius: 50%;
+    align-items: center;
+    line-height: 1.25em;
+    justify-content: center;
+    background: var(--orange-clr);
+}
+.review-title {
+    font-size: 36px;
+    margin-bottom: 12px;
+    line-height: 2.25rem;
+}
+.review-title,
+.card-author {
+    font-weight: 600;
+    color: var(--title-clr);
+}
+.review-text {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+.review-list {
+    font-size: 14px;
+    line-height: 0.875rem;
+}
+.review-list ul li {
+    line-height: 24px;
+    padding-left: 30px;
+    list-style-type: none;
+    background-image: url("img/Done_ring_round_fill.svg");
+    background-repeat: no-repeat;
+}
+.review-list ul li:not(:last-child) {
+    margin-bottom: 12px;
+}
+.review-text,
+.review-list,
+.card-text {
+    color: var(--text-clr);
+}
+.card {
+    top: 0;
+    width: 100%;
+    max-width: 357px;
+    padding: 28px 40px;
+    position: relative;
+    border-radius: 12px;
+    background: var(--white-clr);
+    transition: all .3s ease-in-out;
+    box-shadow: 0 30px 100px 0 var(--shadow-clr);
+}
+.card:hover {
+    top: -10px;
+    box-shadow: 0 20px 100px 0 var(--shadow-clr);
+}
+.card:first-child {
+    margin-left: auto;
+    margin-right: 0;
+}
+.card:not(:last-child) {
+    margin-bottom: 40px;
+}
+.card-top {
+    gap: 20px;
+    display: flex;
+    margin-bottom: 16px;
+}
+.card-logo img {
+    width: 100%;
+    max-width: 87px;
+}
+.card-author {
+    margin-bottom: 8px;
+}
+.card-text {
+    font-size: 16px;
+    line-height: 1.75;
+}
+@media screen and (max-width: 1199px) {
+    .testimonial {
+        padding: 0 20px;
+    }
+}
+@media screen and (max-width: 639px) {
+    .testimonial {
+        gap: unset;
+        display: block;
+        margin: 96px auto;
+    }
+    .testimonial > div {
+        width: 100%;
+        max-width: 100%;
+    }
+    .testimonial > div:first-child {
+        margin-bottom: 64px;
+    }
+}
